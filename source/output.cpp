@@ -1,4 +1,5 @@
 #include <3ds.h>
+#include <stdio.h>
 
 #include "output.h"
 
@@ -12,7 +13,7 @@ void InitOutput()
 {
     sdmcInit();
     consoleInit(GFX_TOP, nullptr);
-    log_file = fopen("hwtest_log.txt", "w");
+    log_file = fopen("sdmc:/hwtest_log.txt", "w");
 }
 
 void Print(const std::string& text)
